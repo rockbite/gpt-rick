@@ -4,12 +4,12 @@ const { Configuration, OpenAIApi } = require("openai");
 const fs = require('fs');
 const axios = require('axios');
 const stringSimilarity = require('string-similarity');
+require('dotenv').config();
 
-
-let appLevelToken = "xapp-1-A05699XUGC8-5213372522000-c0d692cf1bdb28f2044d155010ff4db6432970cf0a902eba42c4248d15f56d5d";
-let webApiToken = "xoxb-11763789218-5183044298230-JIikMr9grVlpSFHXv5Fmlj7u";
-let openAIToken = "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";
-let jenkinsToken = "118b336349921732e15d1cfc5635e5accb";
+let appLevelToken = process.env.SLACK_APP_LEVEL_TOKEN;
+let webApiToken = process.env.SLACK_WEB_TOKEN;
+let openAIToken = process.env.OPEN_AI_TOKEN;
+let jenkinsToken = process.env.JENKINS_TOKEN;
 
 let botUserId = "U055D1A8S6S";
 let botId = "B0569A6AJRE";
